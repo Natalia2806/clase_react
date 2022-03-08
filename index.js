@@ -23,47 +23,100 @@
 // }
 //  console.log(year_4)
 
-
-const year_5 = 100
-if (true){
-  const year_5 = 122
-  console.log(year_5)
+const year_5 = 100;
+if (true) {
+  const year_5 = 122;
+  console.log(year_5);
 }
- console.log(year_5)
+console.log(year_5);
 
- // funciones 
+// funciones
 
- function sumar(num1, num2) {
-   console.log(num1 + num2)
- }
+function sumar(num1, num2) {
+  console.log(num1 + num2);
+}
 
- sumar (6, 10)
+sumar(6, 10);
 
- //Funciones flechas
+//Funciones flechas
 
- const sumarFlecha = (num1, num2) => {
-   console.log(num1 + num2)
- }
+const sumarFlecha = (num1, num2) => {
+  console.log(num1 + num2);
+};
 
-sumarFlecha(5, 4)
+sumarFlecha(5, 4);
 
 //Funcion flecha con un solo parametro
-const sumarParametro = num1 => {
-  return num1 + 2
-}
+const sumarParametro = (num1) => {
+  return num1 + 2;
+};
 
-console.log(sumarParametro(3))
+console.log(sumarParametro(3));
 
 //Funcion flecha sin return y sin llaves
 
-const felchaSumar = num1 => num1 + 4
+const felchaSumar = (num1) => num1 + 4;
 
-console.log(felchaSumar(5))
+console.log(felchaSumar(5));
 
 //Funcion flecha sin return y sin llaves con parentesis
-const sumar2 = num1 => (num1 - 2)
-console.log(sumar2(5))
+const sumar2 = (num1) => num1 - 2;
+console.log(sumar2(5));
 
 //Funcion flecha sin parametros
-const sumar3 = () => 4 * 5
-console.log(sumar3())
+const sumar3 = () => 4 * 5;
+console.log(sumar3());
+
+//Template string
+const numero = (num) => {
+  return "el numero es: " + num;
+};
+
+console.log(numero(4));
+
+const numeroDos = (num) => {
+  return `el numero es: ${num}`;
+};
+
+console.log(numeroDos(4));
+
+//CONCEPTOS DE OBJETOS
+const mascota = {
+  nombre: "Tom",
+  edad: 3,
+  tipo: "perro",
+  razas: ["pincher", "pitbull"]
+};
+
+mascota.nombre = "Sol";
+mascota.edad = 4;
+console.log(mascota.edad);
+console.log(mascota.razas);
+mascota.razas[0] = "prueba";
+
+//Destructuracion de objeto
+
+const { nombre } = mascota;
+console.log(nombre);
+
+//--------------------------
+
+const web = {
+  name: "natalia",
+  links: {
+    enalce: "natalia.com"
+  },
+  redeSociales: {
+    youtube: {
+      enlace: "musica.com",
+      name: "natalia musica"
+    },
+    facebook: {
+      enlace: "facebook.com",
+      name: "natalia facebbok"
+    }
+  }
+};
+
+const { enlace, name } = web.redeSociales.youtube;
+console.log(enlace);
