@@ -151,7 +151,7 @@ const getPokemon2 = async () => {
   try {
     const res = await fetch("https://pokeapi.co/api/v2/pokemon");
     const data = await res.json();
-    const list_name = data.results.filter( e => e.name === 'bulbasaur')
+    const list_name = data.results.filter(e => e.name === 'bulbasaur')
     console.log(list_name)
   } catch (error) {
     console.log(error);
@@ -165,7 +165,7 @@ const getPokemonLong = async () => {
   try {
     const res = await fetch("https://pokeapi.co/api/v2/pokemon");
     const data = await res.json();
-    const list_name = data.results.filter( e => e.name.length === 7)
+    const list_name = data.results.filter(e => e.name.length === 7)
     console.log(list_name)
   } catch (error) {
     console.log(error);
